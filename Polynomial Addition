@@ -34,5 +34,34 @@ class polynomial:
                 return
             previous = current
             current=current.next
+    def display(self):
+        current = self.head
+        terms = []
+        while current:
+            if current.exp == 0:
+                terms.append(f"{current.coeff}")
+            elif current.exp==1:
+                terms.append(f"{current.coeff}x")
+            else:
+                terms.append(f"{current.coeff}x^{current.exp}")
+            current=current.next
+        print("+".join(terms) if terms else "0")
+    
+    def merge(self,poly2):
+        result=Polynomial()
+        combined={}
+        current=self.head
+        while current:
+            combined[current.exp]=combined.get(current.exp,0)+current.coeff
+            current=current.next
+        current=poly2.head
+        while current:
+            combined[current.exp]=combined.get(current.exp,0)+current.coeff
+            current=current.next
+        for exp in sorted(combined.keys(),reverse=True):
+            result.insert(combined[exp],exp)
+        return result
+    
+
         
             
