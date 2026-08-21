@@ -1,0 +1,62 @@
+queue = [None] * 5
+front = -1
+rear = -1
+MAX_SIZE = 5
+def enqueue(x):
+    global front, rear
+    if rear == MAX_SIZE - 1:
+        print("\nCar Parking is Full!")
+    else:
+        if front == -1:
+            front = 0
+        rear += 1
+        queue[rear] = x
+        print(f"\nCar Parked Successfully: {x}")
+
+def dequeue():
+    global front, rear
+    if front == -1 or front > rear:
+        print("\nCar Parking is Empty!")
+    else:
+        print(f"\nCar Moved Successfully: {queue[front]}")
+        front += 1
+        if front > rear:
+            front = -1
+            rear = -1
+
+def display():
+    if front == -1 or front > rear:
+        print("\nCurrent Car Parking Status: Empty")
+    else:
+        print(f"\nCurrent Car Parking Queue: {queue[front:rear+1]}")
+
+
+print("=== Welcome to Keerthi Car Parking ===")
+
+while True:
+    print("\n--- Menu ---")
+    print("1. Park Car (Enqueue)")
+    print("2. Move Car from Parking (Dequeue)")
+    print("3. Display Parking Status")
+    print("4. Exit")
+   
+    try:
+        choice = int(input("Enter your choice (1-4): "))
+    except ValueError:
+        print("Invalid input! Please enter a number between 1 and 4.")
+        continue
+
+    if choice == 1:
+        new = input("Enter Car Number to add: ")
+        enqueue(new)
+        display()
+    elif choice == 2:
+        dequeue()
+        display()
+    elif choice == 3:
+        display()
+    elif choice == 4:
+        print("\nThank you for using Keerthi Car Parking. Goodbye!")
+        break
+    else:
+        print("\nInvalid Choice! Please choose 
