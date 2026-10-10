@@ -1,141 +1,112 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Python Programs | Keerthika</title>
+    <title>Keerthika | Python Programs</title>
 
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
         }
 
         body {
-            background: #f5f7fb;
-            color: #222;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #243047;
+            line-height: 1.6;
         }
 
         header {
-            background: linear-gradient(135deg, #24292f, #0969da);
+            background: #142d4e;
             color: white;
-            padding: 60px 20px;
             text-align: center;
+            padding: 40px 20px;
         }
 
         header h1 {
-            font-size: 42px;
-            margin-bottom: 12px;
+            font-size: 32px;
+            margin-bottom: 8px;
         }
 
         header p {
-            font-size: 18px;
-            opacity: 0.9;
+            color: #d8e5f5;
         }
 
         .container {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 0 20px;
+            max-width: 1000px;
+            margin: auto;
+            padding: 25px 16px;
         }
 
         .intro {
             text-align: center;
-            margin-bottom: 35px;
+            margin-bottom: 25px;
         }
 
-        .intro h2 {
-            font-size: 30px;
-            margin-bottom: 10px;
+        .search {
+            display: block;
+            width: 100%;
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 13px;
+            border: 1px solid #ccd5e0;
+            border-radius: 8px;
+            font-size: 16px;
         }
 
-        .intro p {
-            color: #666;
-        }
-
-        .grid {
+        .programs {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 22px;
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
         }
 
         .card {
             background: white;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.13);
-        }
-
-        .icon {
-            font-size: 35px;
-            margin-bottom: 15px;
+            padding: 22px;
+            border-radius: 12px;
+            border: 1px solid #e0e7ef;
+            box-shadow: 0 3px 10px #142d4e10;
         }
 
         .card h3 {
-            margin-bottom: 10px;
-            color: #0969da;
+            color: #176b87;
+            margin-bottom: 8px;
         }
 
         .card p {
-            color: #666;
-            line-height: 1.5;
-            margin-bottom: 18px;
+            color: #596579;
+            margin-bottom: 15px;
         }
 
-        .btn {
+        .card a {
             display: inline-block;
-            text-decoration: none;
-            background: #0969da;
+            background: #176b87;
             color: white;
-            padding: 10px 16px;
-            border-radius: 8px;
-            font-size: 14px;
+            padding: 9px 14px;
+            text-decoration: none;
+            border-radius: 6px;
         }
 
-        .btn:hover {
-            background: #0757b5;
+        .card a:hover {
+            background: #104b61;
         }
 
-        .github {
+        #message {
             text-align: center;
-            margin: 45px 0;
-        }
-
-        .github a {
-            display: inline-block;
-            background: #24292f;
-            color: white;
-            padding: 14px 25px;
-            border-radius: 8px;
-            text-decoration: none;
+            margin-top: 20px;
         }
 
         footer {
-            background: #24292f;
+            background: #142d4e;
             color: white;
             text-align: center;
-            padding: 25px;
-            margin-top: 50px;
-        }
-
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 30px;
-            }
-
-            header {
-                padding: 45px 15px;
-            }
+            padding: 18px;
+            margin-top: 35px;
         }
     </style>
 </head>
@@ -143,128 +114,115 @@
 <body>
 
 <header>
-    <h1>🐍 Python Programs</h1>
-    <p>Data Structures & Python Programming Collection</p>
+    <h1>Python Programs</h1>
+    <p>My Coding Journey | Keerthika</p>
 </header>
 
-<div class="container">
+<main class="container">
 
-    <div class="intro">
-        <h2>My Python Programs</h2>
-        <p>
-            A collection of Python programs covering Data Structures
-            and fundamental programming concepts.
-        </p>
-    </div>
+    <section class="intro">
+        <h2>Welcome to My Python Portfolio</h2>
+        <p>Explore my Python programs and practice projects.</p>
+    </section>
 
-    <div class="grid">
+    <input
+        type="search"
+        id="search"
+        class="search"
+        placeholder="Search Python programs..."
+        aria-label="Search Python programs"
+    >
 
-        <!-- Linked List -->
-        <div class="card">
-            <div class="icon">🔗</div>
-            <h3>Singly Linked List</h3>
-            <p>
-                Programs for insertion and deletion operations
-                in a singly linked list.
-            </p>
-            <a class="btn"
-               href="https://github.com/keerthikaSerman/Python-programs"
-               target="_blank">
-                View Programs
+    <section class="programs" id="programs">
+
+        <article class="card">
+            <h3>Hello World</h3>
+            <p>My first Python program.</p>
+            <a href="https://github.com/keerthikaserman/Python-programs"
+               target="_blank" rel="noopener noreferrer">
+                View Code
             </a>
-        </div>
+        </article>
 
-        <!-- Stack -->
-        <div class="card">
-            <div class="icon">📚</div>
-            <h3>Stack</h3>
-            <p>
-                Stack implementation using arrays and linked lists,
-                including basic operations.
-            </p>
-            <a class="btn"
-               href="https://github.com/keerthikaSerman/Python-programs"
-               target="_blank">
-                View Programs
+        <article class="card">
+            <h3>Variables and Data Types</h3>
+            <p>Learn variables, strings, integers and other data types.</p>
+            <a href="https://github.com/keerthikaserman/Python-programs"
+               target="_blank" rel="noopener noreferrer">
+                View Code
             </a>
-        </div>
+        </article>
 
-        <!-- Queue -->
-        <div class="card">
-            <div class="icon">🚶</div>
-            <h3>Queue</h3>
-            <p>
-                Queue implementation using arrays and linked lists
-                with fundamental queue operations.
-            </p>
-            <a class="btn"
-               href="https://github.com/keerthikaSerman/Python-programs"
-               target="_blank">
-                View Programs
+        <article class="card">
+            <h3>If-Else Statements</h3>
+            <p>Practice decision-making in Python.</p>
+            <a href="https://github.com/keerthikaserman/Python-programs"
+               target="_blank" rel="noopener noreferrer">
+                View Code
             </a>
-        </div>
+        </article>
 
-        <!-- Palindrome -->
-        <div class="card">
-            <div class="icon">🔄</div>
-            <h3>Palindrome</h3>
-            <p>
-                Python program to check whether a given sequence
-                is a palindrome.
-            </p>
-            <a class="btn"
-               href="https://github.com/keerthikaSerman/Python-programs"
-               target="_blank">
-                View Program
+        <article class="card">
+            <h3>Loops</h3>
+            <p>Explore for loops and while loops.</p>
+            <a href="https://github.com/keerthikaserman/Python-programs"
+               target="_blank" rel="noopener noreferrer">
+                View Code
             </a>
-        </div>
+        </article>
 
-        <!-- Polynomial -->
-        <div class="card">
-            <div class="icon">➕</div>
-            <h3>Polynomial Addition</h3>
-            <p>
-                Polynomial addition implemented using
-                linked list concepts.
-            </p>
-            <a class="btn"
-               href="https://github.com/keerthikaSerman/Python-programs"
-               target="_blank">
-                View Program
+        <article class="card">
+            <h3>Functions</h3>
+            <p>Understand functions, parameters and return values.</p>
+            <a href="https://github.com/keerthikaserman/Python-programs"
+               target="_blank" rel="noopener noreferrer">
+                View Code
             </a>
-        </div>
+        </article>
 
-        <!-- Infix -->
-        <div class="card">
-            <div class="icon">🧮</div>
-            <h3>Infix to Postfix</h3>
-            <p>
-                Stack-based implementation for converting
-                infix expressions into postfix expressions.
-            </p>
-            <a class="btn"
-               href="https://github.com/keerthikaSerman/Python-programs"
-               target="_blank">
-                View Program
+        <article class="card">
+            <h3>Python Projects</h3>
+            <p>Explore my practice programs and mini-projects.</p>
+            <a href="https://github.com/keerthikaserman/Python-programs"
+               target="_blank" rel="noopener noreferrer">
+                View Repository
             </a>
-        </div>
+        </article>
 
-    </div>
+    </section>
 
-    <div class="github">
-        <a href="https://github.com/keerthikaSerman/Python-programs"
-           target="_blank">
-            ⭐ View Full GitHub Repository
-        </a>
-    </div>
+    <p id="message" hidden>No matching programs found.</p>
 
-</div>
+</main>
 
 <footer>
-    <p>© 2026 Keerthika | Python Programs</p>
+    <p>Created by Keerthika | Keep Learning, Keep Coding!</p>
 </footer>
+
+<script>
+    const search = document.getElementById("search");
+    const cards = document.querySelectorAll(".card");
+    const message = document.getElementById("message");
+
+    search.addEventListener("input", function () {
+        const query = search.value.toLowerCase();
+        let visibleCount = 0;
+
+        cards.forEach(function (card) {
+            const matches = card.textContent
+                .toLowerCase()
+                .includes(query);
+
+            card.hidden = !matches;
+
+            if (matches) {
+                visibleCount++;
+            }
+        });
+
+        message.hidden = visibleCount !== 0;
+    });
+</script>
 
 </body>
 </html>
-```
-
